@@ -1403,7 +1403,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .s-header__content {
     background-color: #ffffff;
-    background-image: url(../images/james.jpeg);
     background-size: 300px 300px;
     background-repeat: no-repeat;
     background-position: right top;
@@ -1412,6 +1411,23 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding-bottom: 8rem;
     border-bottom: 1px dashed #efefef;
     position: relative;
+}
+
+.s-header__foto {
+  background-color: #ffffff;
+  background-image: url(../images/james.jpeg);
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  margin-top: 10%;
+  margin-right: 10%;
+  width: 25%;
+  float: right;
+  background-position: right top;
+  border-radius: 100%;
+  min-height: 1rem;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  border-bottom: 1px dashed #efefef;
 }
 
 /* -------------------------------------------------------------------
