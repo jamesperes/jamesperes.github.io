@@ -1,178 +1,93 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="pt-BR">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>James Peres</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>James Peres</title>
+  <meta name="description" content="James Peres: programação (especialmente Python), corrida e uma boa cerveja. Projetos e o podcast diário Antes do Expediente.">
+  <meta name="theme-color" content="#0F274D">
+  <link rel="canonical" href="http://jamesperes.com/">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:title" content="James Peres">
+  <meta property="og:description" content="Programação (especialmente Python), corrida e uma boa cerveja.">
+  <meta property="og:image" content="http://jamesperes.com/images/james.jpeg">
+  <style>
+    :root { --navy:#0F274D; --red:#C41E3A; --paper:#F5F7FB; --card:#fff; --muted:#5B6B84; --line:#E3E8F0; }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--paper); color: var(--navy); line-height:1.55; }
+    a { color: inherit; }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+    header { background: var(--navy); color:#fff; padding: calc(2.5rem + env(safe-area-inset-top)) 0 2.25rem; text-align:center; border-bottom: 6px solid var(--red); }
+    .avatar { width: 8rem; height: 8rem; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+    h1 { font-size: clamp(2rem, 9vw, 2.75rem); margin: 1rem 0 .4rem; letter-spacing: -.02em; line-height:1.1; }
+    .bio { margin: 0 auto; max-width: 30rem; opacity: .9; font-size: 1.05rem; }
+    .social { list-style:none; padding:0; margin: 1.5rem 0 0; display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; }
+    .social a { display:inline-flex; align-items:center; min-height:44px; padding:.5rem 1rem; border-radius:999px; border:1.5px solid rgba(255,255,255,.45); text-decoration:none; font-weight:600; font-size:.9rem; }
+    .social a:hover, .social a:focus-visible { background:#fff; color: var(--navy); }
+    main { padding: 1.5rem 0 1rem; }
+    h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--red); margin: 1.75rem 0 .75rem; }
+    .card { background: var(--card); border-radius: 1rem; box-shadow: 0 1px 3px rgba(15,39,77,.08); }
+    .pod { display:flex; gap:1rem; align-items:center; padding: 1rem; text-decoration:none; }
+    .pod img { width: 5.5rem; height: 5.5rem; border-radius: .75rem; flex:none; }
+    .pod strong { display:block; font-size: 1.2rem; line-height:1.2; }
+    .pod span { display:block; color: var(--muted); font-size:.92rem; margin-top:.2rem; }
+    .pod em { display:inline-block; margin-top:.5rem; font-style:normal; font-weight:700; color: var(--red); font-size:.9rem; }
+    .projects { list-style:none; margin:0; padding:0; }
+    .projects li + li { border-top: 1px solid var(--line); }
+    .projects a { display:block; padding: .9rem 1rem; text-decoration:none; }
+    .projects a:hover strong, .projects a:focus-visible strong { color: var(--red); }
+    .projects strong { display:block; font-size: 1rem; }
+    .projects a > span { display:block; color: var(--muted); font-size: .9rem; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:700; color: var(--navy); background: var(--paper); border-radius: 999px; padding: .05rem .5rem; margin-left:.35rem; vertical-align: middle; }
+    .more { display:block; text-align:center; padding: .9rem; font-weight:600; text-decoration:none; color: var(--red); }
+    footer { text-align:center; color: var(--muted); font-size:.85rem; padding: 1.5rem 1.25rem calc(2rem + env(safe-area-inset-bottom)); }
+  </style>
 </head>
-
-<body id="top">
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<body>
+  <header>
+    <div class="wrap">
+      <img class="avatar" src="images/james.jpeg" alt="Foto de James Peres" width="128" height="128">
+      <h1>James Peres</h1>
+      <p class="bio">Apaixonado por programação, especialmente Python. Também gosto de correr e de uma boa cerveja.</p>
+      <ul class="social" aria-label="Redes sociais">
+        <li><a href="https://twitter.com/jamesperes" rel="me">Twitter</a></li>
+        <li><a href="https://www.instagram.com/jamesperes" rel="me">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/jamesperes/" rel="me">LinkedIn</a></li>
+        <li><a href="https://t.me/jamesperes" rel="me">Telegram</a></li>
+        <li><a href="https://www.strava.com/athletes/49399770" rel="me">Strava</a></li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Header
-    ================================================== -->
-    <header class="s-header">
+  <main class="wrap">
+    <h2>Podcast</h2>
+    <a class="card pod" href="/antes-do-expediente/">
+      <img src="/antes-do-expediente/cover.jpg" alt="" width="88" height="88">
+      <div>
+        <strong>Antes do Expediente</strong>
+        <span>Resumo diário de Rio, Brasil, tecnologia, Flamengo, NFL e NBA.</span>
+        <em>Ouvir o episódio de hoje →</em>
+      </div>
+    </a>
 
-        <div class="row">
+    <h2>Projetos</h2>
+    <div class="card">
+      <ul class="projects">
+        <li><a href="https://github.com/jamesperes/resumo_notion"><strong>resumo_notion <span class="tag">Python</span></strong><span>App Django que importa o “Segundo cérebro” exportado do Notion e gera uma análise semanal com a API da OpenAI.</span></a></li>
+        <li><a href="https://github.com/jamesperes/skills"><strong>skills <span class="tag">Shell</span></strong><span>Coleção de skills para o Claude Code, como um vault Obsidian “segundo cérebro” para tech leads.</span></a></li>
+        <li><a href="https://github.com/jamesperes/toolbelt-data"><strong>toolbelt-data</strong><span>Playbooks de IA para explorar métricas e gerar queries no AWS Athena sem SQL avançado.</span></a></li>
+        <li><a href="https://github.com/jamesperes/python-toolbelt"><strong>python-toolbelt</strong><span>Lista das “ferramentas” built-in do Python.</span></a></li>
+        <li><a href="https://github.com/jamesperes/tio-patinhas"><strong>tio-patinhas</strong><span>Projeto para facilitar o controle de gastos.</span></a></li>
+        <li><a href="https://github.com/jamesperes/jper_toolbelt"><strong>jper_toolbelt <span class="tag">Python</span></strong><span>Pequenas automações baseadas em arquivos JSON.</span></a></li>
+      </ul>
+      <a class="more" href="https://github.com/jamesperes">Todos os repositórios no GitHub →</a>
+    </div>
+  </main>
 
-            <div class="s-header__content column">
-                <h1 class="s-header__logotext">
-                    <a href="index.html" title="">James Peres</a>
-                </h1>
-              
-                <p class="s-header__tagline"></p>
-
-            </div>
-            <div class="s-header__foto"></div>
-        </div> <!-- end row -->
-
-       <nav class="s-header__nav-wrap">
-
-           <div class="row">
-                <ul class="s-header__nav">
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#0">About Me</a></li>	
-                    <li><a href="#0">Podcasts</a></li>	
-                    <li><a href="#0">Books</a></li>	
-                    <li><a href="#0">Archives</a></li>
-                </ul> <!-- end #nav -->
-           </div> 
-
-        </nav> <!-- end #nav-wrap -->
-
-        <a class="header-menu-toggle" href="#0" title="Menu"><span>Menu</span></a>
-
-
-
-    </header> <!-- Header End -->
-
-
-
-    <!-- Content
-    ================================================== -->
-    <div class="s-content">
-
-        <div class="row">
-
-            <div id="main" class="s-content__main large-8 column">
-
-                <article class="entry">
-
-                    <header class="entry__header">
-
-                        <h2 class="entry__title h1">
-                            <a href="single.html" title="">Whats this</a>
-                        </h2>
-
-                     
-                    </header>
-                    
-                    <div class="entry__content">
-                        <p>
-                          A page has been created with the purpose of gathering a variety of interesting links and sharing a bit of what the world has to offer.
-                           In this space, it is possible to find a true collection of resources and useful information, covering various topics and areas of interest. 
-                           Sharing knowledge and discovering new sources of information is one of the missions of this page, considering the need to connect people 
-                           and disseminate relevant content. Welcome to the world of possibilities that this page provides!
-                        </p>
-                    </div> 
-
-                </article> <!-- end entry -->
-           </div> <!-- end main -->
-
-
-           <div id="sidebar" class="s-content__sidebar large-4 column">
-
-                <div class="widget widget_text group">
-                    <h3 class="h6">Me</h3>
-
-                    <p>
-                      I am passionate about programming, especially Python. Additionally, 
-                      I enjoy running for exercise and appreciate a good beer.
-                    </p>
-                </div>
-               
-           </div> <!-- end sidebar -->
-
-       </div> <!-- end row -->
-
-   </div> <!-- end content-wrap -->
-
-
-    <!-- Footer
-    ================================================== -->
-    <footer class="s-footer">
-
-        <div class="row s-footer__top">
-            <div class="column">
-                <ul class="s-footer__social">
-                    <li><a href="https://twitter.com/jamesperes"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.instagram.com/jamesperes"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/jamesperes/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="https://t.me/jamesperes"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.strava.com/athletes/49399770"><i class="fab fa-strava" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div> <!-- end footer__top -->
-
-        <div class="row s-footer__bottom">
-
-            <div class="ss-copyright">
-                <span>© Copyright 2023</span> 
-                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
-            </div>
-
-        </div> <!-- end footer__bottom -->
-
-
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
-            </a>
-        </div> <!-- end ss-go-top -->
-
-    </footer> <!-- end Footer-->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
-
+  <footer>© 2026 James Peres</footer>
 </body>
-
 </html>
